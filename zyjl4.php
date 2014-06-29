@@ -4,10 +4,10 @@
 /*
 $rsum=array();
 
-foreach(recload('jdz-zmd') as $r)
-{ $r['type']='zmd';array_push($rsum,$r);}
-foreach(recload('jdz-ln') as $r)
-{ $r['type']='ln';$r['time']=date('H:i:s',strtotime($r['time'])+6*3600);array_push($rsum,$r);}
+foreach(recload('ms-mzjd') as $r)
+{ $r['type']='zmd';$r['time']=date('H:i:s',strtotime($r['time'])+12*3600);array_push($rsum,$r);}
+foreach(recload('ms-xl') as $r)
+{ $r['type']='ln';$r['time']=date('H:i:s',strtotime($r['time'])+0*3600);array_push($rsum,$r);}
 
 
 function cmp($a, $b) {
@@ -20,10 +20,10 @@ function cmp($a, $b) {
 }
 uasort($rsum,'cmp');
 
-*/
-//file_put_contents('record/jdz.json',json_encode($rsum));
 
-$rsum=json_decode(file_get_contents('record/jdz.json'),1);
+//file_put_contents('record/ms.json',json_encode($rsum));
+*/
+$rsum=json_decode(file_get_contents('record/ms.json'),1);
 ?>
 <html lang="zh-cn">
 
@@ -37,7 +37,7 @@ $rsum=json_decode(file_get_contents('record/jdz.json'),1);
 <body style='padding-top: 70px;'>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<a  class="btn btn-default navbar-btn" href='index.php' ><span class='glyphicon glyphicon-arrow-left'></span></a>
-	<p class="navbar-text">源程序2092-间谍战记录</p>
+	<p class="navbar-text">源程序2092-ms战记录</p>
 	</nav>
 	<div class='container'>
 
@@ -46,10 +46,10 @@ $rsum=json_decode(file_get_contents('record/jdz.json'),1);
             <?php foreach($rsum as $r){?>
             <div class='row'>
                 <div class="col-md-5 " style="text-align:right">
-                    <strong style='color:<?php if ($r["name"]=='完全潇洒的鸭子'){echo 'blue';}  ?>'>
+                    <strong style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
 					<?php if ($r["type"]=='zmd'){echo $r['name'];}  ?></strong>
                     <br>
-                    <div style='color:<?php if ($r["name"]=='完全潇洒的鸭子'){echo 'blue';}  ?>'>
+                    <div style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
                     <?php if ($r[ "type"]=='zmd' ){echo $r[ 'rec'];} ?>
 					</div>
 
@@ -59,10 +59,10 @@ $rsum=json_decode(file_get_contents('record/jdz.json'),1);
                     <?php echo $r[ 'time'];?>
                 </div>
                 <div class="col-md-5">
-                    <strong style='color:<?php if ($r["name"]=='..'){echo 'blue';}  ?>'>
+                    <strong style='color:<?php if ($r["name"]=='完全潇洒的鸭子'){echo 'blue';}  ?>'>
 					<?php if ($r["type"]=='ln'){echo $r['name'];}  ?></strong>
                     <br>
-                    <div style='color:<?php if ($r["name"]=='..'){echo 'blue';}  ?>'>
+                    <div style='color:<?php if ($r["name"]=='完全潇洒的鸭子'){echo 'blue';}  ?>'>
 					<?php if ($r[ "type"]=='ln' ){echo $r[ 'rec'];} ?>
 					</div>
 

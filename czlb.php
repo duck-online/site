@@ -102,24 +102,27 @@
                 </script>
             </div>
             <div class="col-md-2">
-                <h2 style='text-align:center'>联邦巡逻舰队</h2>
-                <div style='text-align:center'>UnKnown</div>
+
+			<?php
+			
+			
+			$fz=json_decode(file_get_contents('fz.json'),1);
+			$dic=array();
+			foreach ($fz as $sl){array_push($dic,$sl);}
+			
+			
+			?>
+				<?php foreach ($fz as $sl){ ?>
+                <h2 style='text-align:center'><?php echo $sl['name'];?></h2>
+				<?php foreach ($sl['people'] as $people) {?>
+                <div style='text-align:center'><?php echo $people;?><br>
+				<?php foreach ($dic as $lk) { if ($sl['name']!=$lk['name']){?>
+				<a href='gfz.php?people=<?php echo json_encode($people);?>&fz=<?php echo $lk['id'];?>'>换到<?php echo $lk['name'];?></a><br>
+				<?php }} ?>
+				</div>
+				<?php }} ?>
 
 
-
-                <h2 style='text-align:center'>?西玛舰队?</h2>
-                <div style='text-align:center'>UnKnown</div>
-                <h2 style='text-align:center'>未分配</h2>
-                <div style='text-align:center'>肥细</div>
-                <div style='text-align:center'>扎古</div>
-                <div style='text-align:center'>本</div>
-                <div style='text-align:center'>妞</div>
-                <div style='text-align:center'>行剑</div>
-                <div style='text-align:center'>guxiang</div>
-                <div style='text-align:center'>6</div>
-                <div style='text-align:center'>空航</div>
-                <div style='text-align:center'>风行者</div>
-                <div style='text-align:center'>雪风</div>
             </div>
         </div>
     </div>
