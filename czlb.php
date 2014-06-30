@@ -11,36 +11,37 @@
 <body style='padding-top: 70px;'>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <a class="btn btn-default navbar-btn" href='index.php'><span class='glyphicon glyphicon-arrow-left'></span></a>
-        <p class="navbar-text">源程序2092-ms战参战列表</p>
+        <p class="navbar-text">源程序2092-殖民卫星突入战参战列表</p>
     </nav>
 
     <div class='container'>
         <div class='row'>
             <div class="col-md-3">
                 <h2 style='text-align:center'>战斗背景</h2>
-                <p>类型：宇宙ms战</p>
-                <p>参战人数：3v3~8v8</p>
-                <p>战斗宙域：UnKnown(空旷的宇宙空间)</p>
+                <p>类型：殖民卫星突入战斗</p>
+                <p>参战人数：2v2~5v5</p>
+                <p>战斗地点：天之御柱</p>
+				<p>目标：破坏或者夺取 星雉，云耀还有镇魂曲这三台MS的资料</p>
                 <p>参战势力：
                     <ul>
-                        <li>【联邦巡逻舰队】</li>
-                        <li>【?西玛舰队?】</li>
+                        <li>密娜方
+</li>
+                        <li>迷之势力</li>
                     </ul>
                 </p>
-                <p>支援能力:
+                <p>支援能力:UnKnown<!--
                     <ul>
                         <li>【联邦巡逻舰队】:【全弹覆盖】</li>
                         <li>【?西玛舰队?】:【超视距感应诱导炮击】</li>
-                    </ul>
+                    </ul>-->
                 </p>
                 <p>
-                    战役简报：
-                    <br>两方必须各有一个领队，各自的部队领队将在开战前一小时收到命令，依据命令配置你们的机动战士。
-                    <br>对战限定于最高20个回合，20回合后将判定胜负。
-                    <br>战斗爆发的地点在开战前一小时才会暴露。
-                    <br>机体装备不限 但是请考虑驾驶员。
-                    <br>武备方面，将对各类武器进行分级，依据其重量 体积 重要程度进行分级 限制武器搭载。
-                    <br>请在至少开战前两小时完成小队编组，那么 祝各位驾驶员好运！
+                    战役简报：<br>
+					在有重力，无重力和微重力下的步兵战斗<br>
+					星雉是密娜的下一个座机<br>
+					云耀是萨拉。塞西尔的<br>
+					镇魂歌是阿兰多的<br>
+					破坏或者夺取它们的情报。
                 </p>
             </div>
             <div class="col-md-7">
