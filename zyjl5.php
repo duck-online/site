@@ -1,14 +1,14 @@
 <?php include 'tools.php';?>
 
 <?php
-/*
+
 $rsum=array();
+/*
+foreach(recload('tzyj-yb') as $r)
+{ $r['type']='yb';$r['time']=date('H:i:s',strtotime($r['time'])+0*3600);array_push($rsum,$r);}
+foreach(recload('tzyj-mn') as $r)
+{ $r['type']='mn';$r['time']=date('H:i:s',strtotime($r['time'])+0*3600);array_push($rsum,$r);}
 
-foreach(recload('fx-fh') as $r)
-{ $r['type']='fh';array_push($rsum,$r);}
-
-foreach(recload('fx-lzls') as $r)
-{ $r['type']='lzls';array_push($rsum,$r);}
 
 function cmp($a, $b) {
 	$ta=strtotime($a['time']);
@@ -21,10 +21,9 @@ function cmp($a, $b) {
 uasort($rsum,'cmp');
 
 
+file_put_contents('record/tzyj.json',json_encode($rsum));
 */
-//$rsum=file_put_contents('record/fx.json',json_encode($rsum));
-
-$rsum=json_decode(file_get_contents('record/qtc.json'),1);
+$rsum=json_decode(file_get_contents('record/tzyj.json'),1);
 ?>
 <html lang="zh-cn">
 
@@ -38,7 +37,7 @@ $rsum=json_decode(file_get_contents('record/qtc.json'),1);
 <body style='padding-top: 70px;'>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<a  class="btn btn-default navbar-btn" href='index.php' ><span class='glyphicon glyphicon-arrow-left'></span></a>
-	<p class="navbar-text">源程序2092-潜艇战记录</p>
+	<p class="navbar-text">源程序2092-殖民卫星突入战记录</p>
 	</nav>
 	<div class='container'>
 
@@ -48,23 +47,23 @@ $rsum=json_decode(file_get_contents('record/qtc.json'),1);
             <div class='row'>
                 <div class="col-md-5 " style="text-align:right">
                     <strong style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
-					<?php if ($r["type"]=='dg'){echo $r['name'];}  ?></strong>
+					<?php if ($r["type"]=='yb'){echo $r['name'];}  ?></strong>
                     <br>
                     <div style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
-                    <?php if ($r[ "type"]=='dg' ){echo $r[ 'rec'];} ?>
+                    <?php if ($r[ "type"]=='yb' ){echo $r[ 'rec'];} ?>
 					</div>
 
 
                 </div>
-                <div class="col-md-2 " style='text-align:<?php if ($r["type"]=='dg'){echo "left" ;}else{echo "right";}   ?>'>
+                <div class="col-md-2 " style='text-align:<?php if ($r["type"]=='yb'){echo "left" ;}else{echo "right";}   ?>'>
                     <?php echo $r[ 'time'];?>
                 </div>
                 <div class="col-md-5">
                     <strong style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
-					<?php if ($r["type"]=='dqq'){echo $r['name'];}  ?></strong>
+					<?php if ($r["type"]=='mn'){echo $r['name'];}  ?></strong>
                     <br>
                     <div style='color:<?php if ($r["name"]=='星之扉'){echo 'blue';}  ?>'>
-					<?php if ($r[ "type"]=='dqq' ){echo $r[ 'rec'];} ?>
+					<?php if ($r[ "type"]=='mn' ){echo $r[ 'rec'];} ?>
 					</div>
 
                 </div>
