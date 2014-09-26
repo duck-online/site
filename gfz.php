@@ -32,6 +32,6 @@ if((isset($_GET['people']))&&(isset($_GET['fz'])))
 	file_put_contents('fz.json',json_encode($fz1));
 }
 
-header("Location: http://duck.thpc.tk/czlb.php"); 
+header("Location: /czlb.php"); 
 //确保重定向后，后续代码不会被执行 
 exit;

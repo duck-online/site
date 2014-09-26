@@ -18,6 +18,7 @@ $a=$a."\n".$_GET['qid'].'在'.date("Y/m/d H-i-s").'摇出的的摇号点数是'.
 
 
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<body>
 		<div>
 		<form action='yh.php' method='get'>

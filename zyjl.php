@@ -1,6 +1,7 @@
 <?php include 'tools.php';?>
 <html lang="zh-cn">
 	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="http://cdn.bootcss.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 	<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
